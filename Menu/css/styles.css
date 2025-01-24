@@ -1,6 +1,7 @@
 html {
     font-size: 1em;
     scroll-behavior: smooth;
+    box-sizing: content-box;
 }
 
 body {
@@ -22,6 +23,8 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    position: sticky;
+    top: 0px;
 }
 
 .header-title {
@@ -30,6 +33,10 @@ a {
 
 .header-nav {
     width: 70%;
+}
+
+.menu-item {
+    font-size: 1.5em;
 }
 
 .header-menu {
@@ -46,18 +53,89 @@ a {
     flex-direction: column;
     justify-content: space-around;
     gap: 50px;
-    padding: 50px 100px;
+    padding: 100px 250px;
 }
 
 .section {
-    padding: 1em;
     min-height: 500px;
     border: #000 1px solid;
     text-align: center;
 }
 
+/* Secciones */
+
+.galery-container {
+    display: grid;
+    min-height: 300px;
+    margin: 60px 60px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.galery-photo {
+    border: #000 1px solid;
+    height: 150px;
+}
+
+.about-title {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: #000 1px solid;
+    margin: 0;
+}
+
+.about-text {
+    font-size: 1.2em;
+    margin: 30px 60px;
+    text-align: justify;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    gap: 10px;
+}
+
+.services-tarjet {
+    border: #000 1px solid;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.tarjet-image {
+    height: 150px;
+    border: #000 1px solid;
+}
+
+.tarjet-text {
+    text-align: justify;
+    padding: 15px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 60px;
+}
+
+/* Hover */
+
 .menu-item:hover .menu-link:hover {
     background-color: #fff;
     color: #88c;
+    transition: 0.5s;
+}
+
+.galery-photo:hover {
+    background-color: #fff8;
+    transition: 0.5s;
+}
+
+.services-tarjet:hover {
+    background-color: #88c;
+    color: #fff;
     transition: 0.5s;
 }
