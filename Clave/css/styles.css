@@ -43,9 +43,19 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.key:hover, .keypad:hover .key {
+
+.keyborrar {
+    padding: 15px;
+    text-align: center;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.key:hover, .keypad:hover .key .keyborrar{
     background-color: #c0c0c0;
 }
-.keypad:hover .key {
+.keypad:hover .key  .keyborrar{
     content: '*';
 }
