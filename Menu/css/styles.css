@@ -72,8 +72,22 @@ a {
 }
 
 .galery-photo {
-    border: #000 1px solid;
     height: 150px;
+}
+
+.photo1 {
+    background-image: url("../img/ejemploescultura.jpg");
+    background-size: cover;
+}
+
+.photo2 {
+    background-image: url("../img/ejemplopintura.jpg");
+    background-size: cover;
+}
+
+.photo3 {
+    background-image: url("../img/ejemplomusica.jpg");
+    background-size: cover;
 }
 
 .about-title {
@@ -81,8 +95,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: #000 1px solid;
     margin: 0;
+    background-color: #88c;
+    color: #fff;
 }
 
 .about-text {
@@ -109,6 +124,21 @@ a {
     border: #000 1px solid;
 }
 
+.paint-image {
+    background-image: url("../img/pintura.jpg");
+    background-size: cover;
+}
+
+.art-image {
+    background-image: url("../img/artesania.jpg");
+    background-size: cover;
+}
+
+.music-image {
+    background-image: url("../img/musica.jpg");
+    background-size: cover;
+}
+
 .tarjet-text {
     text-align: justify;
     padding: 15px;
@@ -121,6 +151,19 @@ a {
     padding: 30px 60px;
 }
 
+#submit {
+    background-color: #88c;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    height: 30px;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* Hover */
 
 .menu-item:hover .menu-link:hover {
@@ -130,7 +173,7 @@ a {
 }
 
 .galery-photo:hover {
-    background-color: #fff8;
+    background-color: gradient(#88c, #bbe);
     transition: 0.5s;
 }
 
@@ -138,4 +181,10 @@ a {
     background-color: #88c;
     color: #fff;
     transition: 0.5s;
+}
+
+#submit:hover {
+    background-color: #bbe;
+    transition: 0.5s;
+    cursor: pointer;
 }
