@@ -7,22 +7,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Teclado de claves</h1>
-        <form action="" method="post">
-            <label for="clave">Clave:</label>
-            <input type="password" name="clave" id="clave">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-            <input type="button" value="0">
-            <input type="button" value="Borrar">
-        </form>
+        <div class="left-block">
+            <h2>Clave</h2>
+            <p>Si la imagen y frase no son las que has definido, por seguridad no ingreses la clave</p>
+            <p>Ingresa tu clave</p>
+            <input type="password" class="pin-input" maxlength="4">
+            <p>Ingresa la clave que utilizas en el cajero mediante el teclado virtual</p>
+        </div>
+        <div class="right-block">
+            <div class="keypad">
+                <button class="key">1</button>
+                <button class="key">2</button>
+                <button class="key">3</button>
+                <button class="key">4</button>
+                <button class="key">5</button>
+                <button class="key">6</button>
+                <button class="key">7</button>
+                <button class="key">8</button>
+                <button class="key">9</button>
+                <button class="key">Borrar</button>
+                <button class="key">0</button>
+                <button class="key">Entrar</button>
+            </div>
+        </div>
     </div> 
 </body>
 </html>
