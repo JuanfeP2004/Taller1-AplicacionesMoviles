@@ -28,6 +28,19 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.toggle-password {
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    background-color: #ddd;
+}
+
 .ingresar {
     padding: 10px;
     padding-left: 13px;

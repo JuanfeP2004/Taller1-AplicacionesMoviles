@@ -1,5 +1,14 @@
-// Constante para seleccionar TODOS los botones del teclado virtual
+// Seleccionar TODOS los botones del teclado virtual
 const keys = document.querySelectorAll('.key');
+
+// Campo de entrada de contraseña
+const passwordInput = document.querySelector('.pin-input');
+
+// Botón de borrar
+const deleteButton = document.querySelector('.keyborrar');
+
+// Botón para mostrar/ocultar contraseña
+const togglePasswordButton = document.querySelector('.toggle-password');
 
 // Función para cambiar todos los botones a *
 function showAsterisks() {
@@ -8,38 +17,37 @@ function showAsterisks() {
 
 // Función para restaurar los números originales
 function restoreNumbers() {
-    keys.forEach((key, index) => key.textContent = index + 1);
-    keys[keys.length - 1].textContent = '0'; // Restaura el último botón a "0"
+    keys.forEach(key => key.textContent = key.getAttribute('data-value'));
 }
 
-// Añade los eventos a cada botón
+// Añadir eventos de hover a cada botón para mostrar y restaurar los números
 keys.forEach(key => {
     key.addEventListener('mouseenter', showAsterisks);
     key.addEventListener('mouseleave', restoreNumbers);
 });
 
-
-//Conectar el teclado virtual con el cuadro
-// Campo de entrada de contraseña
-const passwordInput = document.querySelector('.pin-input');
-
-// Seleccionar todos los botones de número y el botón de borrar
-const numberButtons = document.querySelectorAll('.key');
-const deleteButton = document.querySelector('.keyborrar');
-
-// Añadir eventos a los botones de número
-numberButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Agregar el número al valor del input (si no supera el máximo)
+// Añadir eventos de clic para capturar los valores originales
+keys.forEach(key => {
+    key.addEventListener('click', () => {
+        const value = key.getAttribute('data-value'); // Recuperar el valor original
         if (passwordInput.value.length < passwordInput.maxLength) {
-            passwordInput.value += button.textContent;
+            passwordInput.value += value; // Agregar el valor al input
         }
     });
 });
 
-// Evento para el botón de borrar
+// Evento para borrar el último carácter
 deleteButton.addEventListener('click', () => {
-    // Eliminar el último carácter del valor del input
-    passwordInput.value = passwordInput.value.slice(0, -1);
+    passwordInput.value = passwordInput.value.slice(0, -1); // Eliminar el último carácter
 });
 
+// Evento para mostrar/ocultar la contraseña
+togglePasswordButton.addEventListener('click', () => {
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        togglePasswordButton.textContent = 'Ocultar contraseña';
+    } else {
+        passwordInput.type = 'password';
+        togglePasswordButton.textContent = 'Mostrar contraseña';
+    }
+});
