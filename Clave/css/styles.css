@@ -28,11 +28,24 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.ingresar {
+    padding: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+    text-align: center;
+    background-color: #f3de25;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 .keypad {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 10px;
+    padding-left: 50px;
+    padding-top: 40px;
 }
 .key {
     padding: 15px;
