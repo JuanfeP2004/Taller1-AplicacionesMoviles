@@ -176,6 +176,7 @@ a {
     background-color: #fff;
     color: #88c;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .galery-photo:hover {
