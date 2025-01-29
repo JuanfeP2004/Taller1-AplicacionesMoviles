@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
         grabCursor: true, // Permite arrastrar con el mouse
         freeMode: true, 
         autoplay: {
-            delay: 300000, // Cambio automático 
+            delay: 30000000, // Cambio automático 
             disableOnInteraction: false, // Sigue funcionando tras interacción
         },
         breakpoints: {
@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active'); // Alterna la clase 'active'
 }
+  
 

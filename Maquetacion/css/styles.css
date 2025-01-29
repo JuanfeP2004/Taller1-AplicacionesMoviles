@@ -12,8 +12,10 @@ header {
   right: 0;
   z-index: 1000;
 }
+
+/* Mostrar menú móvil */
 .mobile-menu {
-  display: none; /* Oculta el menú móvil por defecto */
+  display: none;
 }
 
 nav {
@@ -308,17 +310,42 @@ h1 {
   .tagline {
     font-size: 13px !important; /* Reduce el tamaño del texto */
     text-align: center; /* Centra el texto */
-    margin-top: -300px !important;
+    margin-top: -370px !important;
+  }
+
+  .mobile-menu {
+    display: flex; /* Hacemos el contenedor flex para alinear el botón de menú */
+    flex-direction: column; /* Alineamos los elementos en columna */
+
+  }
+  
+  .mobile-menu-toggle {
+    display: block; /* Asegúrate de que el botón hamburguesa sea visible */
+    font-size: 24px; /* Tamaño del ícono */
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de puntero */
+  }
+  
+  /* Oculta el contenido del menú por defecto */
+  .mobile-menu-content {
+    display: none; /* Oculta el contenido del menú */
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Muestra el contenido del menú cuando está activo */
+  .mobile-menu.active .mobile-menu-content {
+    display: block; /* Muestra el contenido cuando el menú está activo */
   }
 
   .product-gallery {
-      flex-direction: column; /* Cambia a columna en dispositivos móviles */
-      align-items: center; /* Centra los elementos */
-  }
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+}
 
-  .product-item {
-      margin: 5px 0; /* Espaciado entre los productos */
-      width: 100%; /* Anchura del producto */
+  .product-item img {
+      height: 200px; /* Altura fija para las imágenes */
+      object-fit: cover; /* Cubre el contenedor sin distorsionar la imagen */
   }
 
   .product-info {
@@ -332,4 +359,11 @@ h1 {
   .footer-container {
       flex-direction: column; /* Cambia a columna en dispositivos móviles */
   }
+
+  /* Ocultar botones en pantallas pequeñas */
+  .left-buttons button,
+  .right-buttons button {
+    display: none; 
+  }
+
 }

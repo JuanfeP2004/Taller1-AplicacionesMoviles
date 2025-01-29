@@ -18,18 +18,20 @@
             </div>
             <h1>THE FIGMA STORE</h1>
             <div class="right-buttons">
-                <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button> <!-- Botón del menú -->
                 <button>👤</button>
                 <button>CART</button>
             </div>
         </nav>
         <div class="mobile-menu" id="mobileMenu">
-            <button onclick="toggleMenu()">Cerrar</button>
-            <button>SHOP</button>
-            <button>ABOUT</button>
-            <button>👤</button>
-            <button>CART</button>
-        </div>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button> <!-- Botón del menú -->
+            <div class="mobile-menu-content">
+              <button onclick="toggleMenu()">Cerrar</button>
+              <button>SHOP</button>
+              <button>ABOUT</button>
+              <button>👤</button>
+              <button>CART</button>
+            </div>
+          </div>
     </header>
     
 
